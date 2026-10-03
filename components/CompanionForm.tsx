@@ -57,8 +57,8 @@ const CompanionForm = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const companion = await createCompanion(values);
+  const onSubmit = async (dataSet: z.infer<typeof formSchema>) => {
+    const companion = await createCompanion(dataSet);
 
     if(companion) {
       console.log("Companion created successfully:", companion);

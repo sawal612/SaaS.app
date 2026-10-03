@@ -75,6 +75,7 @@ interface CompanionComponentProps {
   companionId: string;
   subject: string;
   topic: string;
+  duration: number;
   name: string;
   userName: string;
   userImage: string;

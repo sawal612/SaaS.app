@@ -195,10 +195,10 @@ body {
   }
 
   .companion-avatar {
-    @apply size-[300px] flex items-center justify-center rounded-lg max-sm:size-[100px] mt-4;
+    @apply relative size-[300px] flex items-center justify-center overflow-hidden rounded-lg max-sm:size-[100px] mt-4;
   }
   .companion-lottie {
-    @apply size-[300px] max-sm:size-[100px];
+    @apply size-full max-w-full max-h-full;
   }
 
   .user-section {
@@ -213,10 +213,10 @@ body {
   }
 
   .transcript {
-    @apply relative flex flex-col gap-4 w-full items-center pt-10 flex-grow overflow-hidden;
+    @apply relative flex flex-col gap-4 w-full items-center pt-6 flex-1;
   }
   .transcript-message {
-    @apply overflow-y-auto w-full flex flex-col gap-4 max-sm:gap-2 pr-2 h-full text-2xl;
+    @apply w-full min-h-[180px] flex flex-col gap-4 max-sm:gap-2 pr-2 text-2xl rounded-lg border border-border bg-white p-4;
   }
   .transcript-fade {
     @apply pointer-events-none absolute bottom-0 left-0 right-0 h-40 max-sm:h-20 bg-gradient-to-t from-background via-background/90 to-transparent z-10;

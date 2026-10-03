@@ -1,3 +1,6 @@
+'use client';
+
+import { deleteCompanion } from "@/lib/actions/companion.action";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +14,11 @@ type CompanionCardProps = {
 }
 
 const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCardProps) => {
+  const handleDelete = async () => {
+    await deleteCompanion(id);
+    
+  }
+  
   return (
     <article className="companion-card margin" style={{ backgroundColor: color }}>
       <div className="flex items-center justify-between">
@@ -19,6 +27,9 @@ const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCar
         </div>
         <button className="companion-bookmark">
             <Image src='/icons/bookmark.svg' alt="bookmark" width={10} height={10} />
+        </button>
+        <button className="companion-delete" onClick={handleDelete}>
+          delete
         </button>
       </div>
       <h2 className="2xl font-bold">{name}</h2>
